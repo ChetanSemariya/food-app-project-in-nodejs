@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const testRoutes = require('./routes/testRoutes');
 const authRoutes = require('./routes/authRoutes');
+const userRoutes = require('./routes/userRoutes');
 const connectDb = require('./config/db');
 
 // configure env
@@ -26,6 +27,7 @@ app.use(morgan('dev')); // dev hume yhh batayga ki konsa url hit hua hai kis tim
 // url => http:localhost:8000
 app.use('/api/v1/test', testRoutes);
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/user', userRoutes);
 
 
 app.get('/', (req, res) => {
