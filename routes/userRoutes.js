@@ -3,7 +3,8 @@ const {
     getUserController,
     updateUserController, 
     updatePasswordController,
-    resetPasswordController
+    resetPasswordController,
+    deleteProfileController
 } = require('../controllers/userController');
 const authMiddleware = require('../middlewares/authMiddleware');
 const router = express.Router();
@@ -21,5 +22,6 @@ router.post("/updatePassword", authMiddleware, updatePasswordController);
 // RESET PASSWORD
 router.post("/resetPassword", authMiddleware, resetPasswordController)
 
-
+// DELETE USER
+router.delete("/deleteUser/:id", authMiddleware, deleteProfileController)
 module.exports = router;

@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const testRoutes = require('./routes/testRoutes');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
+const resturantRoutes = require('./routes/resturantRoutes');
 const connectDb = require('./config/db');
 
 // configure env
@@ -28,6 +29,7 @@ app.use(morgan('dev')); // dev hume yhh batayga ki konsa url hit hua hai kis tim
 app.use('/api/v1/test', testRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/resturant', resturantRoutes);
 
 
 app.get('/', (req, res) => {
