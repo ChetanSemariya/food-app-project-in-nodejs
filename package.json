@@ -4,7 +4,6 @@
   "description": "Food app with node and express",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js"
   },
   "author": "Chetan",

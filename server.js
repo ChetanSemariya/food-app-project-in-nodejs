@@ -7,6 +7,7 @@ const testRoutes = require('./routes/testRoutes');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const resturantRoutes = require('./routes/resturantRoutes');
+const categoryRoutes = require("./routes/categoryRoutes");
 const connectDb = require('./config/db');
 
 // configure env
@@ -30,6 +31,7 @@ app.use('/api/v1/test', testRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/resturant', resturantRoutes);
+app.use('/api/v1/category', categoryRoutes);
 
 
 app.get('/', (req, res) => {
